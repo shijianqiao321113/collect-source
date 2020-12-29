@@ -1,0 +1,132 @@
+{
+    "templateKey": "NOVEL_EXIAOSHUO",
+    "name": "E小说",
+    "domainUrl": "https://www.exiaoshuo.com/",
+    "localStorageNginxProxyUrl": "http://localhost:8888/content/api/",
+    "localStoragePath": "E:\\nove\\biquge\\",
+    "noveTopicList": [
+        {
+            "name": "玄幻",
+            "url": "/xuanhuan"
+        },
+        {
+            "name": "修真",
+            "url": "/xiuzhen"
+        },
+        {
+            "name": "都市",
+            "url": "/dushi"
+        },
+        {
+            "name": "历史",
+            "url": "/lishi"
+        },
+        {
+            "name": "网游",
+            "url": "/wangyou"
+        },
+        {
+            "name": "科幻",
+            "url": "/kehuan"
+        },
+        {
+            "name": "言情",
+            "url": "/yanqing"
+        },
+        {
+            "name": "其它",
+            "url": "/qita"
+        },
+        {
+            "name": "全本",
+            "url": "/quanben"
+        }
+    ],
+    "novelListPageStart": {
+        "defaultValue": 1,
+        "type": "text"
+    },
+    "novelListPageEnd": {
+        "defaultValue": 1,
+        "type": "text"
+    },
+    "novelList": {
+        "node": ".s2 a",
+        "type": "list",
+        "url": {
+            "type": "attr",
+            "attrName": "href"
+        }
+    },
+    "noveName": {
+        "node": "#info h1",
+        "type": "text"
+    },
+    "noveAuthor": {
+        "node": "#info p",
+        "index": "2",
+        "type": "list",
+        "value": {
+            "type": "text"
+        }
+    },
+    "noveDescribe": {
+        "node": "#intro p",
+        "index": "0",
+        "type": "list",
+        "value": {
+            "type": "text"
+        }
+    },
+    "noveCoverImage": {
+        "node": "#fmimg img",
+        "type": "attr",
+        "attrName": "src"
+    },
+    "noveLastUpdateTime": {
+        "node": "#info p",
+        "index": "5",
+        "type": "list",
+        "value": {
+            "type": "text"
+        }
+    },
+    "noveChapterList": {
+        "node": ".listmain dl dd a",
+        "type": "list",
+        "value": {
+            "type": "text"
+        },
+        "url": {
+            "type": "attr",
+            "attrName": "href"
+        }
+    },
+    "noveContent": {
+        "node": "#content",
+        "removeHtml": [
+            "p"
+        ],
+        "type": "text",
+        "replaceAll": [
+            {
+                "<br >": ""
+            },
+            {
+                "<br>": ""
+            },
+            {
+                "<br />": ""
+            },
+            {
+                "<br/>": ""
+            },
+            {
+                "&nbsp;": " "
+            },
+            {
+                "&nbs;": " "
+            }
+        ]
+    }
+}
