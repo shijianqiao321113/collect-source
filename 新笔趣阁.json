@@ -1,0 +1,120 @@
+{
+    "templateKey": "NOVEL_BIQUGE",
+    "name": "新笔趣阁",
+    "domainUrl": "http://www.xbiquge.la/",
+    "localStorageNginxProxyUrl": "http://localhost:8888/content/api/",
+    "localStoragePath": "E:\\nove\\biquge\\",
+    "noveTopicList": [
+        {
+            "name": "玄幻",
+            "url": "/fenlei/1_{0}.html"
+        },
+        {
+            "name": "修真",
+            "url": "/fenlei/2_{0}.html"
+        },
+        {
+            "name": "都市",
+            "url": "/fenlei/3_{0}.html"
+        },
+        {
+            "name": "穿越",
+            "url": "/fenlei/4_{0}.html"
+        },
+        {
+            "name": "网游",
+            "url": "/fenlei/5_{0}.html"
+        },
+        {
+            "name": "科幻",
+            "url": "/fenlei/6_{0}.html"
+        }
+    ],
+    "novelListPageStart": {
+        "node": "#pagelink .first",
+        "type": "text"
+    },
+    "novelListPageEnd": {
+        "node": "#pagelink .last",
+        "type": "text"
+    },
+    "novelList": {
+        "node": "#newscontent ul li .s2 a",
+        "type": "list",
+        "url": {
+            "type": "attr",
+            "attrName": "href"
+        }
+    },
+    "noveName": {
+        "node": "#info h1",
+        "type": "text"
+    },
+    "noveAuthor": {
+        "node": "#info p",
+        "index": "0",
+        "type": "list",
+        "value": {
+            "type": "text"
+        }
+    },
+    "noveDescribe": {
+        "node": "#intro p",
+        "index": "1",
+        "type": "list",
+        "value": {
+            "type": "text"
+        }
+    },
+    "noveCoverImage": {
+        "node": "#fmimg img",
+        "type": "attr",
+        "attrName": "src"
+    },
+    "noveLastUpdateTime": {
+        "node": "#info p",
+        "index": "2",
+        "type": "list",
+        "value": {
+            "type": "text"
+        }
+    },
+    "noveChapterList": {
+        "node": ".box_con #list dl dd a",
+        "type": "list",
+        "value": {
+            "type": "text"
+        },
+        "url": {
+            "type": "attr",
+            "attrName": "href"
+        }
+    },
+    "noveContent": {
+        "node": "#content",
+        "removeHtml": [
+            "p"
+        ],
+        "type": "text",
+        "replaceAll": [
+            {
+                "<br >": ""
+            },
+            {
+                "<br>": ""
+            },
+            {
+                "<br />": ""
+            },
+            {
+                "<br/>": ""
+            },
+            {
+                "&nbsp;": " "
+            },
+            {
+                "&nbs;": " "
+            }
+        ]
+    }
+}
