@@ -1,0 +1,131 @@
+{
+    "templateKey": "NOVEL_QUANBEN",
+    "name": "全本小说",
+    "domainUrl": "https://www.qb5.tw/",
+    "localStorageNginxProxyUrl": "http://localhost:8888/content/api/",
+    "localStoragePath": "E:\\nove\\biquge\\",
+    "noveTopicList": [
+        {
+            "name": "玄幻魔法",
+            "url": "/fenlei/1_{0}/"
+        },
+        {
+            "name": "仙侠修真",
+            "url": "/fenlei/2_{0}/"
+        },
+        {
+            "name": "都市言情",
+            "url": "/fenlei/3_{0}/"
+        },
+        {
+            "name": "历史军事",
+            "url": "/fenlei/4_{0}/"
+        },
+        {
+            "name": "网游竞技",
+            "url": "/fenlei/5_{0}/"
+        },
+        {
+            "name": "科幻灵异",
+            "url": "/fenlei/6_{0}/"
+        },
+        {
+            "name": "恐怖惊悚",
+            "url": "/fenlei/7_{0}/"
+        },
+        {
+            "name": "其他",
+            "url": "/fenlei/8_{0}/"
+        },
+        {
+            "name": "完本",
+            "url": "/quanben/{0}/"
+        }
+    ],
+    "novelListPageStart": {
+        "node": "#pagelink .first",
+        "type": "text"
+    },
+    "novelListPageEnd": {
+        "node": "#pagelink .last",
+        "type": "text"
+    },
+    "novelList": {
+        "node": ".zp .name",
+        "type": "list",
+        "url": {
+            "type": "attr",
+            "attrName": "href"
+        }
+    },
+    "noveName": {
+        "node": ".img_in img",
+        "type": "attr",
+        "attrName": "title"
+    },
+    "noveAuthor": {
+        "node": "#info h1 small a",
+        "type": "text"
+    },
+    "noveDescribe": {
+        "node": "#intro",
+        "type": "text"
+    },
+    "noveLastUpdateTime": {
+        "node": ".update a",
+        "removeText": [
+            "（",
+            "）"
+        ],
+        "type": "text"
+    },
+    "noveCoverImage": {
+        "node": ".img_in img",
+        "type": "attr",
+        "attrName": "src"
+    },
+    "noveChapterList": {
+        "node": ".zjlist dd a",
+        "type": "list",
+        "value": {
+            "type": "text"
+        },
+        "linkPrefix": true,
+        "url": {
+            "type": "attr",
+            "attrName": "href"
+        }
+    },
+    "noveContent": {
+        "node": "#content",
+        "removeHtml": [
+            "a"
+        ],
+        "removeText": [
+            "全本小说网 www.qb5.tw，最快更新",
+            "最新章节！",
+            "精品啦~求新鲜出炉的推荐票哇~"
+        ],
+        "type": "text",
+        "replaceAll": [
+            {
+                "<br >": ""
+            },
+            {
+                "<br>": ""
+            },
+            {
+                "<br />": ""
+            },
+            {
+                "<br/>": ""
+            },
+            {
+                "&nbsp;": " "
+            },
+            {
+                "&nbs;": " "
+            }
+        ]
+    }
+}
