@@ -1,0 +1,185 @@
+{
+    "templateKey": "NOVEL_JIUTAO",
+    "name": "九桃小说",
+    "domainUrl": "https://www.9txs.com/",
+    "localStoragePath": "E:\\nove\\biquge\\",
+    "localStorageNginxProxyUrl": "http://localhost:8888/content/api/",
+    "noveTopicList": [
+        {
+            "name": "玄幻奇幻",
+            "url": "/library/0_1_0_{0}.html"
+        },
+        {
+            "name": "武侠修真",
+            "url": "/library/0_2_0_{0}.html"
+        },
+        {
+            "name": "都市生活",
+            "url": "/library/0_3_0_{0}.html"
+        },
+        {
+            "name": "历史军事",
+            "url": "/library/0_4_0_{0}.html"
+        },
+        {
+            "name": "游戏竞技",
+            "url": "/library/0_5_0_{0}.html"
+        },
+        {
+            "name": "科幻未来",
+            "url": "/library/0_6_0_{0}.html"
+        },
+        {
+            "name": "悬疑灵异",
+            "url": "/library/0_7_0_{0}.html"
+        },
+        {
+            "name": "二次元",
+            "url": "/library/0_8_0_{0}.html"
+        },
+        {
+            "name": "经典短篇",
+            "url": "/library/0_9_0_{0}.html"
+        },
+        {
+            "name": "古代言情",
+            "url": "/library/0_10_0_{0}.html"
+        },
+        {
+            "name": "现代言情",
+            "url": "/library/0_11_0_{0}.html"
+        },
+        {
+            "name": "幻想奇缘",
+            "url": "/library/0_12_0_{0}.html"
+        },
+        {
+            "name": "浪漫青春",
+            "url": "/library/0_13_0_{0}.html"
+        },
+        {
+            "name": "网络情缘",
+            "url": "/library/0_14_0_{0}.html"
+        },
+        {
+            "name": "科幻空间",
+            "url": "/library/0_15_0_{0}.html"
+        },
+        {
+            "name": "恐怖灵异",
+            "url": "/library/0_16_0_{0}.html"
+        },
+        {
+            "name": "N次元",
+            "url": "/library/0_17_0_{0}.html"
+        },
+        {
+            "name": "言情美文",
+            "url": "/library/0_18_0_{0}.html"
+        },
+        {
+            "name": "其他类型",
+            "url": "/library/0_19_0_{0}.html"
+        }
+    ],
+    "novelListPageStart": {
+        "defaultValue": 1,
+        "type": "text"
+    },
+    "novelListPageEnd": {
+        "defaultValue": 100,
+        "type": "text"
+    },
+    "novelList": {
+        "node": ".bookname",
+        "type": "list",
+        "url": {
+            "type": "attr",
+            "attrName": "href"
+        }
+    },
+    "noveName": {
+        "node": ".detail h1",
+        "type": "text"
+    },
+    "noveAuthor": {
+        "node": ".detail p a",
+        "index": "0",
+        "type": "list",
+        "value": {
+            "type": "text"
+        }
+    },
+    "noveLastUpdateTime": {
+        "node": ".light",
+        "index": "0",
+        "removeText": [
+            "\\(",
+            "\\)"
+        ],
+        "type": "list",
+        "value": {
+            "type": "text"
+        }
+    },
+    "noveDescribe": {
+        "node": ".content .intro",
+        "type": "text",
+        "replaceAll": [
+            {
+                "<br >": ""
+            },
+            {
+                "<br>": ""
+            },
+            {
+                "<br />": ""
+            },
+            {
+                "<br/>": ""
+            },
+            {
+                "&nbsp;": " "
+            },
+            {
+                "&nbs;": " "
+            }
+        ]
+    },
+    "noveCoverImage": {
+        "node": ".detail .bookimg img",
+        "type": "attr",
+        "attrName": "src"
+    },
+    "noveChapterPage": {
+        "node": ".action a",
+        "type": "attr",
+        "attrName": "href"
+    },
+    "noveChapterList": {
+        "node": "dd a",
+        "type": "list",
+        "value": {
+            "type": "text"
+        },
+        "url": {
+            "type": "attr",
+            "attrName": "href"
+        }
+    },
+    "noveContent": {
+        "node": "#content",
+        "removeFirstHtml": [
+            "p"
+        ],
+        "removeText": [
+            "<p>"
+        ],
+        "type": "text",
+        "replaceAll": [
+            {
+                "</p>": "\r\n"
+            }
+        ]
+    }
+}
